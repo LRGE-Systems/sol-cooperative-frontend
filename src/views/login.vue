@@ -1,7 +1,7 @@
 <style scoped lang="scss">
   .content {
     padding: 12px;
-    color: $metallic-blue;
+    color: $primary-color;
   }
 
   .logo-container {
@@ -15,12 +15,12 @@
   }
 
   input {
-    border: solid 1px $dark-grey-blue !important;
+    border: solid 1px #006C4C !important;
   }
 
   .button {
     &.button-primary {
-      background-color: $dark-grey-blue !important;
+      background-color: #006C4C !important;
     }
   }
 

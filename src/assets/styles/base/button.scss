@@ -4,8 +4,8 @@
 
 .button.button.button-primary,
 button.button-primary.button-primary {
-  background-color: rgb(47, 113, 158);
-  border-color: rgba(37, 125, 167, 1);
+  border-color: $primary-color;
+  background-color: $primary-color;
 }
 
 .button {
@@ -24,8 +24,8 @@ button.button-primary.button-primary {
 .button-success,
 .button-submit {
   color: $white;
-  border-color: rgb(46, 158, 136);
-  background-color: rgb(46, 158, 136) !important;
+  border-color: #62B55A;
+  background-color: #62B55A !important;
 
   &:focus,
   &:hover,

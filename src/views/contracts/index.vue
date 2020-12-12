@@ -9,7 +9,7 @@
     }
 
     &.signed {
-      background-color: $cerulean;
+      background-color: $primary-color;
     }
 
     &.refused {

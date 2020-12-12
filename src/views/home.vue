@@ -29,7 +29,7 @@
 
     color: $white;
     font-size: 12px;
-    background-color: $cerulean;
+    background-color: $primary-color;
 
     &.draft,
     &.closed,
@@ -38,7 +38,7 @@
     }
 
     &.ongoing {
-      background-color: $cerulean;
+      background-color: $primary-color;
     }
 
     &.canceled,

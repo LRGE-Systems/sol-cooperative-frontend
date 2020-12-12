@@ -4,9 +4,9 @@ $container-width-larger-than-phablet: $container-width;
 
 $global-radius: 4px !default;
 
-$primary-color: $cerulean !default;
-$link-color: $cerulean !default;
-$font-family: 'Roboto', sans-serif;
+$primary-color: #006C4C !default;
+$link-color: #006C4C !default;
+$font-family: 'Ubuntu','Verdana', sans-serif;
 
 input {
   &[type="date"] {

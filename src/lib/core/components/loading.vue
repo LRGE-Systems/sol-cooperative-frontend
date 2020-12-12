@@ -11,7 +11,7 @@
     height: 4px;
     display: block;
     width: 100%;
-    background-color: $cerulean;
+    background-color: $primary-color;
     border-radius: 2px;
     background-clip: padding-box;
     overflow: hidden;

@@ -7,7 +7,7 @@
     }
 
     &.ongoing {
-      background-color: $cerulean;
+      background-color: $primary-color;
     }
 
     &.canceled,

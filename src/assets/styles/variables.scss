@@ -22,7 +22,7 @@ $pale-red: #d9534f;
 $pale-teal: #86beb3;
 $peach: #ffaf7a;
 $pinkish-grey: #cfcfcf;
-$primary-color: $cerulean;
+$primary-color: #006C4C;
 $sky-blue: #5ba9f6;
 $turquoise-blue: #00c1d1;
 $ugly-blue: #31708f;
@@ -31,6 +31,6 @@ $white-three: #f1f1f1;
 $white-two: #dfdfdf;
 $white: #ffffff;
 
-$background-color: $light-blue-grey;
+$background-color: lighten($primary-color, 75%);
 $danger-color: $pale-red;
-$success-color: rgb(48, 158, 136);
+$success-color: #62B55A;
