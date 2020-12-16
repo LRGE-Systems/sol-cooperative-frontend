@@ -2,7 +2,7 @@
 
   .tabbar {
     color: $pale-grey;
-    background-color: rgb(73, 113, 138);
+    background-color: $primary-color;
 
     @for $i from 1 through 4 {
       &.tab-container-#{$i} {

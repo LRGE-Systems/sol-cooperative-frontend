@@ -1,5 +1,5 @@
 #!/bin/bash
 yarn install
-yarn serve --port 8080
+yarn serve --port 8081
 
 exec $@

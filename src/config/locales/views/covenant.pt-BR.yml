@@ -1,33 +1,33 @@
 pt-BR:
   covenants:
     index:
-      title: Convênios
+      title: Projetos
       list:
-        title: Lista de Convênios
+        title: Lista de Projetos
       button:
-        new: Novo convênio
+        new: Novo projeto
       search:
-        placeholder: Busque por nome ou número do convênio
+        placeholder: Busque por nome ou número do projeto
 
       notifications:
         destroy:
-          success: Convênio excluido com sucesso
-          failure: Houve um erro ao excluir o convênio
+          success: Projeto excluido com sucesso
+          failure: Houve um erro ao excluir o projeto
 
     show:
-      title: Detalhes do convênio
+      title: Detalhes do projeto
 
       tabs:
         covenant:
-          title: Convênio
+          title: Projeto
         groups:
           title: Grupos e itens
 
       general:
-        title: Dados do convênio
+        title: Dados do projeto
 
       navbar:
-        title: 'Convênio nº '
+        title: 'Projeto nº '
 
       notifications:
         destroy:

@@ -8,14 +8,14 @@ pt-BR:
         id: Código (ID)
         name: Nome
         email: E-mail
-        covenantId: Convênio
-        covenantName: Convênio
+        covenantId: Projeto
+        covenantName: Projeto
 
       errors:
         name:
           missing: Nome não pode ficar em branco
         covenant:
-          missing: Convênio não pode ficar em branco
+          missing: Projeto não pode ficar em branco
         email:
           missing: E-mail não pode ficar em branco
 

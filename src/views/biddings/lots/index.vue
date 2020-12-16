@@ -85,6 +85,9 @@
             .container
               | {{ $t('.empty') }}
 
+      button.mt-3.button.button-primary.u-full-width(v-if="bidding_status == 'ongoing'" @click="reviewBidding")
+                | {{ $t('.button.review') }}
+
       button.u-full-width.button-submit.mt-3.button-finish-draft.button-long(@click="waitingBidding" v-if="lotsCount && bidding_status == 'draft'")
         | {{ $t('.button.finish') }}
 
@@ -220,6 +223,18 @@
             this.errors = this.$i18n.errify(errors, { model: 'bidding' })
 
             this.$notifications.error(this.$t('.notifications.waiting.failure'))
+          })
+      },
+
+      reviewBidding() {
+        this.$http.patch('/cooperative/biddings/' + this.biddingId + '/review')
+          .then((response) => {
+            this.$notifications.clear()
+            this.$notifications.info("Licitação pronta para revisão.")
+            this.init()
+          })
+          .catch((err) => {
+            this.$notifications.error("Houve um erro ao fechar a licitação.")
           })
       },
 

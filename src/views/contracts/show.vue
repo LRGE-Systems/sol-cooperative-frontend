@@ -71,6 +71,14 @@
           a.button(:href="contractPath", target="_blank")
             | {{ $t('.general.button.download') }}
 
+        .row(v-if="contract.service_order_pdf")
+          a.button(:href="serviceOrderPath", target="_blank")
+            | {{ "Ordem de serviço" }}
+          
+        .row(v-if="contract.buy_approval_pdf")
+          a.button(:href="buyApprovalPath", target="_blank")
+            | {{"Autorização de compra" }}
+
       .card.mt-2
         h5 {{ $t('.signatures.title') }}
 
@@ -245,6 +253,14 @@
 
       contractPath() {
         return this.contract && this.$http.host + "/" + this.contract.contract_pdf
+      },
+
+      serviceOrderPath() {
+        return this.contract && this.$http.host + "/" + this.contract.service_order_pdf
+      },
+
+      buyApprovalPath() {
+        return this.contract && this.$http.host + "/" + this.contract.buy_approval_pdf
       },
 
       cantChooseAnother() {

@@ -15,8 +15,8 @@ pt-BR:
         closingDate: Data de encerramento
         openingDate: Data de abertura
         drawEndDays: Dias corridos para desempate
-        covenantId: Convênio
-        covenant: Convênio
+        covenantId: Projeto
+        covenant: Projeto
         deadline: Prazo para entrega/execução em dias
         address: Local de entrega
         modality: Modalidade
@@ -50,7 +50,7 @@ pt-BR:
 
       errors:
         covenant:
-          missing: Convênio não pode ficar em branco
+          missing: Projeto não pode ficar em branco
         title:
           missing: Número não pode ficar em branco
         description:

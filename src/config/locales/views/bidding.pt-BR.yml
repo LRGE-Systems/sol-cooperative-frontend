@@ -28,7 +28,7 @@ pt-BR:
     new:
       title: Nova licitação
       general: Configurações gerais
-      empty_covenants: Associação sem convênios. Não é possível criar uma licitação.
+      empty_covenants: Associação sem projetos. Não é possível criar uma licitação.
 
       button:
         submit: Salvar e definir itens da licitação
@@ -111,6 +111,7 @@ pt-BR:
         submit: Criar novo aditivo
         submitting: Criando novo aditivo..
         finish: Concluir licitação
+        
 
       documents:
         title: Documentos

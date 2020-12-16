@@ -10,6 +10,7 @@ pt-BR:
           new: Adicionar lote
           proposals: Visualizar propostas
           finish: Finalizar e enviar para liberação
+          review: Fechar e revisar
 
         tabs:
           lots: Lotes e itens
@@ -19,6 +20,10 @@ pt-BR:
           waiting:
             success: Licitação envida para liberação com sucesso.
             failure: Houve um erro ao enviar a licitação.
+          
+          review:
+            success: Licitação pronta para revisão.
+            failure: Houve um erro ao fechar a licitação.
 
       new:
         title: Novo lote
