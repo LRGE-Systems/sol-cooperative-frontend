@@ -69,30 +69,64 @@
 
         .row(v-if="contract.contract_pdf")
           a.button(:href="contractPath", target="_blank")
-            | {{ $t('.general.button.download') }}
+            | {{ "Baixar documento" }}
+        div(v-else)
+          .row()
+            button.button(@click="showDocRequest")
+              | {{ "Anexar documento de saída" }}
 
-        .row(v-if="contract.service_order_pdf")
-          a.button(:href="serviceOrderPath", target="_blank")
-            | {{ "Ordem de serviço" }}
+          .row(v-if='isShowDocRequest')
+            label {{ "Informe abaixo" }}
+            form(@submit.prevent="sendDoc")
+              .input-group
+                select(required, v-model='documentType')
+                  option(value='') {{ "Selecione o tipo de documento" }}
+                  option() {{ "Autorização de Fornecimento" }}
+                  option() {{ "Ordem de Serviço" }}
+                  option() {{ "Contrato" }}
+              .input-group
+                label.block.mr-0-5(for="documentNumber") {{ "Número do documento" }}
+                input(type="text" required id="documentNumber" value="" v-model="documentNumber")
+
+              .input-group
+                label.block.mr-0-5(for="documentDate") {{ "Data do documento" }}
+                input(type="date" required id="documentDate" value="" v-model="documentDate")
+              
+              .input-group
+                label.block.mr-0-5(for="documentFile") {{ "Documento PDF" }}
+                input(type="file" accept="application/pdf" required id="documentFile" value="" @change="fileChange")
+
+              button.button(type='submit') {{ "Salvar" }}
+
+
+
+
+        //- .row(v-if="contract.contract_pdf")
+        //-   a.button(:href="contractPath", target="_blank")
+        //-     | {{ $t('.general.button.download') }}
+
+        //- .row(v-if="contract.service_order_pdf")
+        //-   a.button(:href="serviceOrderPath", target="_blank")
+        //-     | {{ "Ordem de serviço" }}
           
-        .row(v-if="contract.buy_approval_pdf")
-          a.button(:href="buyApprovalPath", target="_blank")
-            | {{"Autorização de compra" }}
+        //- .row(v-if="contract.buy_approval_pdf")
+        //-   a.button(:href="buyApprovalPath", target="_blank")
+        //-     | {{"Autorização de compra" }}
 
-      .card.mt-2
-        h5 {{ $t('.signatures.title') }}
+      //- .card.mt-2
+      //-   h5 {{ $t('.signatures.title') }}
 
-        .row
-          label {{ $t('models.contract.attributes.supplierSignedAt') }}
+      //-   .row
+      //-     label {{ $t('models.contract.attributes.supplierSignedAt') }}
 
-          template(v-if="contract.refused_by_class == 'supplier'")
-            span {{ $t('.refused.at', { value: contract.refused_by_at }) }}
-          template(v-else)
-            span {{ contract.supplier_signed_at || $t('.signatures.waiting') }}
+      //-     template(v-if="contract.refused_by_class == 'supplier'")
+      //-       span {{ $t('.refused.at', { value: contract.refused_by_at }) }}
+      //-     template(v-else)
+      //-       span {{ contract.supplier_signed_at || $t('.signatures.waiting') }}
 
-        .row
-          label {{ $t('models.contract.attributes.userSignedAt') }}
-          span {{ contract.user_signed_at || $t('.signatures.waiting') }}
+      //-   .row
+      //-     label {{ $t('models.contract.attributes.userSignedAt') }}
+      //-     span {{ contract.user_signed_at || $t('.signatures.waiting') }}
 
       .card.mt-2(v-if="refusedStatus")
         h5 {{ $t('.refused.title') }}
@@ -202,6 +236,11 @@
     name: 'contract',
     data () {
       return {
+        documentType: '',
+        documentNumber:'',
+        documentDate:'',
+        documentFile:null,
+        isShowDocRequest: false,
         i18nScope: 'contracts.show',
         contract: null,
         params: null,
@@ -254,6 +293,7 @@
       contractPath() {
         return this.contract && this.$http.host + "/" + this.contract.contract_pdf
       },
+
 
       serviceOrderPath() {
         return this.contract && this.$http.host + "/" + this.contract.service_order_pdf
@@ -336,6 +376,40 @@
 
             console.error(_err)
           })
+      },
+
+      fileChange(e) {
+        var files = e.target.files || e.dataTransfer.files;
+        if (!files.length)
+          return;
+        this.documentFile = files[0];
+      },
+
+      sendDoc(){
+        if(documentFile != null){
+          let fileToUpload = this.documentFile;
+          let formData = new FormData();
+  
+          formData.append('documentFile', fileToUpload);
+          formData.append('documentDate', this.documentDate);
+          formData.append('documentNumber', this.documentNumber);
+          formData.append('documentType', this.documentType);
+          this.completing = true;
+          let self = this;
+          this.$http.post('/cooperative/contracts/'+ this.params.id+'/updateDoc', formData).then((resp)=>{
+            self.contract.contract_pdf = resp.data;
+            self.$notifications.clear()
+            self.$notifications.info("Documento anexado com sucesso")
+          }).catch((err) => {
+            self.$notifications.error("Houve um erro ao anexar o documento")
+          }).then(() => {
+            self.completing = false
+          });
+        }
+      },
+
+      showDocRequest(){
+        this.isShowDocRequest = !this.isShowDocRequest;
       },
 
       openStatusOverlay() {
