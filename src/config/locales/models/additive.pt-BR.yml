@@ -5,10 +5,10 @@ pt-BR:
       other: Aditivos
 
       attributes:
-        from: Data de encerramento atual
-        to: Nova data de encerramento
+        from: Encerramento de proposta atual
+        to: Nova data de encerramento de proposta de proposta
         bidding: Licitação
 
       errors:
         to:
-          invalid: Data inválida. Data deve ser posterior a data de encerramento atual
+          invalid: Data inválida. Data deve ser posterior ao encerramento de proposta atual

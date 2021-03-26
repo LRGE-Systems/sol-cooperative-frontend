@@ -12,10 +12,10 @@ pt-BR:
       notifications:
         cooperative:
           import:
-            success: Integração de Associação iniciada com sucesso
-            failure: Houve um erro ao iniciar a integração de associação
+            success: Integração de Comprador iniciada com sucesso
+            failure: Houve um erro ao iniciar a integração do comprador
 
           update:
-            success: Integração de Associação alterada com sucesso
-            failure: Houve um erro ao editar a integração de associação
+            success: Integração de Comprador alterada com sucesso
+            failure: Houve um erro ao editar a integração do comprador
 

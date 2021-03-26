@@ -11,15 +11,15 @@ pt-BR:
         kind: Tipo de licitação
         status: Situação
         link: Site adicional
-        startDate: Data de início
-        closingDate: Data de encerramento
+        startDate: Recebimento de proposta
+        closingDate: Encerramento de proposta
         openingDate: Data de abertura
         drawEndDays: Dias corridos para desempate
         covenantId: Projeto
         covenant: Projeto
         deadline: Prazo para entrega/execução em dias
         address: Local de entrega
-        modality: Modalidade
+        modality: Abrangência da disputa
         classificationId: Classificação
 
         statuses:
@@ -58,11 +58,11 @@ pt-BR:
         kind:
           missing: Tipo de licitação não pode ficar em branco
         start_date:
-          missing: Data de início não pode ficar em branco
-          invalid: Data de início não pode ser posterior a data de encerramento e não pode ser anterior ou igual a data de hoje.
+          missing: Recebimento de proposta não pode ficar em branco
+          invalid: Recebimento de proposta não pode ser posterior a data de encerramento e não pode ser anterior ou igual a data de hoje.
         closing_date:
-          missing: Data de encerramento não pode ficar em branco
-          invalid: Data de encerramento não pode ser anterior ou igual a data de hoje.
+          missing: Encerramento de proposta não pode ficar em branco
+          invalid: Encerramento de proposta não pode ser anterior ou igual a data de hoje.
         opening_date:
           missing: Data de abertura não pode ficar em branco
         invites:

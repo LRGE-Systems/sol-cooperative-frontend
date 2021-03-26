@@ -19,7 +19,7 @@ pt-BR:
       _index:
         bidding_alerts:
           waiting: A licitação está com a situação %{status}. Aguarde o revisor liberar sua licitação.
-          approved: A licitação está com a situação %{status}. Aguarde a data de início para que a licitação seja disponibilizada para os fornecedores.
+          approved: A licitação está com a situação %{status}. Aguarde a data de recebimento de proposta para que a licitação seja disponibilizada para os fornecedores.
           ongoing_and_closed: A licitação está com a situação %{status}. Neste momento é possível visualizar apenas os valores das propostas enviadas pelos fornecedores.
           ongoing: A licitação está com a situação %{status}. Aguarde o fechamento da licitação para visualizar as propostas enviadas pelos fornecedores.
           under_review: A licitação está com a situação %{status}. Neste momento é possível visualizar as propostas enviadas pelos fornecedores.

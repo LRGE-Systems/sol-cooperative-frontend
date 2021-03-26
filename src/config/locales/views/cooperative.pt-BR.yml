@@ -5,43 +5,43 @@ pt-BR:
       list:
         title: Lista de Associações
       button:
-        new: Nova associação
+        new: Novo comprador
       search:
-        placeholder: Busque por nome ou CNPJ da associação
+        placeholder: Busque por nome ou CNPJ do comprador
 
       notifications:
         destroy:
           success: Associação excluida com sucesso
-          failure: Houve um erro ao excluir a associação
+          failure: Houve um erro ao excluir o comprador
 
     new:
-      title: Nova associação
+      title: Novo comprador
 
       fields:
         name:
-          placeholder: Informe o nome da associação
+          placeholder: Informe o nome do comprador
         cnpj:
           placeholder: Informe o CNPJ
 
       button:
-        submit: Criar associação
-        submitting: Criando associação
+        submit: Criar comprador
+        submitting: Criando comprador
 
       notifications:
-        failure: Houve um erro ao criar a associação
+        failure: Houve um erro ao criar o comprador
 
 
     edit:
-      title: Editar associação
+      title: Editar comprador
 
       notifications:
-        failure: Houve um erro ao editar a associação
+        failure: Houve um erro ao editar o comprador
 
       button:
-        submit: Editar associação
-        submitting: Editando associação
+        submit: Editar comprador
+        submitting: Editando comprador
 
     show:
-      title: Dados da associação
+      title: Dados do comprador
       covenants:
-        title: Projetos da Associação
+        title: Projetos do Comprador
