@@ -42,6 +42,7 @@
 
 <template lang="pug">
   .tool.login
+    <language-toggle />
     .content.text-center.logo-container
 
       img(src="@/assets/images/logo.png" class="logo")
