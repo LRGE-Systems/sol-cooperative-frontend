@@ -7,7 +7,7 @@
       button:
         new: New cooperative
       search:
-        placeholder: Search by cooperative name or CNPJ
+        placeholder: Search by cooperative name or EIN
 
       notifications:
         destroy:
@@ -21,7 +21,7 @@
         name:
           placeholder: Enter cooperative name
         cnpj:
-          placeholder: Enter CNPJ
+          placeholder: Enter EIN
 
       button:
         submit: Create cooperative
