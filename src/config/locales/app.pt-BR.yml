@@ -2,6 +2,9 @@ pt-BR:
   app: 'sol-cooperative-frontend.vue'
   title: 'SOL'
 
+  manual: Manual
+  manual_link: https://www.sol-app.net/s/PTManual-Associacao.pdf
+
   button:
     search: Buscar
     searching: Buscando

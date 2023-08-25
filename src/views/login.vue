@@ -115,7 +115,10 @@
               | {{ submitPasswordText }}
 
     overlay-notification(v-if="showSuccessOverlay", :showOverlay="showSuccessOverlay", :text='$t(".notifications.password.success")', topClass="mt-3")
-
+    
+    div#footerContainer
+      a(:href="$t('manual_link')", target="_blank")
+        | {{ $t('manual') }}
 </template>
 
 <script>
