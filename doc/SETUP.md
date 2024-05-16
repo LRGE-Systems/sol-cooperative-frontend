@@ -18,7 +18,7 @@ DEPLOYING
 rsync -av --delete ./dist/ sol@sol-url.com:/app/sol-cooperative-frontend/production/releases/YYYYMMDDHHMMSS/
 ```
 
-Acessando o servidor:
+Accessing the server:
 
 ```
 ssh sol@sol-url.com
