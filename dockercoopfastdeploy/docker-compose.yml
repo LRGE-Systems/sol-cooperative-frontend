@@ -1,0 +1,8 @@
+version: "2"
+services:
+    coop:
+        image: thhegal/sol-cloud-cooperative:latest
+        volumes: 
+            - ./secrets_coop.yml:/app/src/config/secrets.yml
+        ports:
+            - 8081:8080
