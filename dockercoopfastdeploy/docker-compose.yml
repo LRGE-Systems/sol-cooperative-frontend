@@ -1,8 +1,20 @@
 version: "2"
 services:
-    coop:
+    coopBuild:
         image: thhegal/sol-cloud-cooperative:latest
         volumes: 
             - ./secrets_coop.yml:/app/src/config/secrets.yml
+            - ./dist:/app/build
+
+    coop:
+        image: nginx
+        volumes:
+            - ./dist:/usr/share/nginx/html/coop
+            - ./nginx_coop.conf:/etc/nginx/conf.d/default.conf
         ports:
-            - 8081:8080
+            - 8081:80
+        depends_on:
+            - coopBuild
+        # environment:
+            # - NGINX_HOST=foobar.com
+            # - NGINX_PORT=80
